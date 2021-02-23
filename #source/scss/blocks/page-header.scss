@@ -1,0 +1,17 @@
+.page-header {
+	display: flex;
+	flex-direction: column;
+	background-color: $basic-headers;
+	color: $headers-text;
+
+	&__logo {
+		height: 74px;
+	}
+
+	& img {
+		width: 74px;
+		height: 23px;
+		margin: 23px 0;
+		margin-left: 20px;
+	}
+}
