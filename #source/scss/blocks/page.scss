@@ -1,0 +1,14 @@
+.page {
+	height: 100%;
+	font-size: 14px;
+	font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	line-height: 24px;	
+
+		&__body {
+			min-height: 100%;
+			margin: 0;
+			background-color: $basic-bg-white;
+			color: $basic-content-text;
+		}
+}
