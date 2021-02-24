@@ -1,0 +1,104 @@
+.main-nav {
+	position: relative;
+	width: auto;
+	min-height: 69px;
+	background-color: $basic-headers;
+	
+	&__toggle {
+		position: absolute;
+		top: -52px;
+		right: 20px;
+		display: block;
+		width: 23px;
+		height: 23px;
+		z-index: 2;
+		background-color: $basic-headers;
+		border: none;
+		cursor: pointer;
+
+
+		&:hover {
+			background-color: $basic-headers;
+		}
+
+		&:active {
+			background-color: $basic-headers;
+		}
+
+	}
+
+	&--closed .main-nav__toggle::before {
+		content: "";
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		width: 23px;
+		height: 2px;
+		background-color: $headers-text;
+		box-shadow: 0 8px 0 0 $headers-text,
+					0 16px 0 0 $headers-text;
+	}
+
+	&--closed .main-nav__toggle:active::before {
+		background-color: $toggle-active;
+		box-shadow: 0 8px 0 0 $toggle-active,
+					0 16px 0 0 $toggle-active;
+
+	}
+
+	&--opened .main-nav__toggle {
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 10px;
+			right: 0px;
+			width: 23px;
+			height: 2px;
+			background-color: $headers-text;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+			box-shadow: none;
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:active::before,
+		&:active::after {
+			background-color: $toggle-active;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		list-style: none;
+
+		& a {
+			position: relative;
+			display: block;
+			padding: 25px 0;
+			font-size: 18px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			color: inherit;
+			border-top: 1px solid #465363;
+			border-bottom: 1px solid #000;
+		}
+	}
+
+	&__item a[href]:hover {
+		color: $contacts-text;
+	}
+
+	&__item a[href]:active {
+		color: $toggle-active;
+	}
+}
