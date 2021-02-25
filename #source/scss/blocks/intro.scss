@@ -1,0 +1,98 @@
+.intro {
+	
+	font-size: 24px;
+	font-weight: 300;
+
+	color: $headers-text;
+
+	&__subtitle {
+		margin: 0;
+		margin-bottom: 34px;
+		padding-top: 29px;
+
+		text-align: center;
+	}
+
+	&__content-wrapper {
+		background-color: $basic-headers;
+		background-image: url('/img/backgrounds/back-mobile.jpg');
+	}
+
+	&__mockup-wrapper {
+		position: relative;
+	}
+
+	&__phone {
+		position: relative;
+		top: 4px;
+		z-index: 2;
+	}
+
+	&__screen {
+		position: absolute;
+		z-index: 1;
+		left: 104px;
+		bottom: 57px;
+	}
+
+	&__footer-wrapper {
+		background-color: #1D2631;
+
+		text-align: center;
+
+		& a {
+			font-size: 18px;
+
+			text-decoration: none;
+			text-align: center;
+			color: inherit;
+		}
+	}
+
+	&__platforms-list {
+		padding: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		list-style: none;
+	}
+
+	&__platform-item {
+		margin-left: 17px;
+		margin-right: 17px;
+	}
+
+	&__platforms-note {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 300;
+
+		margin-top: 31px;
+		padding-bottom: 38px;
+	}
+
+	&__button-download {
+		font-size: 18px;
+		font-weight: bold;
+
+		display: inline-block;
+
+		border: 3px solid $headers-text;
+		border-radius: 50px;
+
+		padding: 20px 39px;
+		margin-top: 28px;
+
+		&:hover {
+			background-color: $basic-bg-gray;
+
+			color: $contacts-text;
+		}
+
+		&:active {
+			color: $toggle-active;
+		}
+	}
+}
