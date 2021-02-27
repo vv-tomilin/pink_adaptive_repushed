@@ -1,0 +1,63 @@
+.slider {
+
+
+	&__toggles {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	&__show {
+		display: block;
+	}
+
+	&__hide {
+		display: none;
+	}
+
+	&__toggle {
+		padding: 0;
+
+		width: 6px;
+		height: 6px;
+
+		background-color: $basic-headers;
+		opacity: 0.3;
+
+		border-radius: 50%;
+
+		border: none;
+
+		&--current {
+			width: 12px;
+			height: 12px;
+
+			background-color: #fff;
+
+			border: 3.5px solid $basic-headers;
+
+			opacity: 1;
+		}
+	}
+
+	&__toggle span {
+		display: none;
+	}
+
+
+	&__desktop-buttons {
+
+		@media(min-width: $tablet-width) {
+			display: none;
+		}
+
+		@media(max-width: $mobile-width-only) {
+			display: none;
+		}
+
+		@media(min-width: $desktop-width) {
+			display: block;
+		}
+	}
+}
