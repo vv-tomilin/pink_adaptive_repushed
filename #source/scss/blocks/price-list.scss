@@ -1,0 +1,167 @@
+.price-list {
+
+	&__wrapper {
+		background-color: $basic-bg-gray;
+
+		padding-top: 81px;
+
+		position: relative;
+
+		&::before {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 20px;
+
+			background: linear-gradient(to top left, $basic-bg-gray 50%, rgba(255, 0, 0, 0) 52%);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-100%);
+		}
+	}
+
+	&__mobile-wrapper {
+		overflow: scroll;
+	}
+
+	&__tablet-desktop {
+		
+		@media (max-width: $mobile-width-only) {
+			display: none;
+		}
+	}
+
+	&__mobile {
+
+		display: table;
+		border-collapse: collapse;
+
+		table-layout: fixed;
+
+		width: 100%;
+
+		@media (min-width: $tablet-width) {
+			display: none;
+		}
+
+		@media (min-width: $desktop-width) {
+			display: none;
+		}
+	}
+
+
+	&__headers {
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $headers-text;
+
+		background-color: $basic-headers;
+	}
+
+	&__header-cell {
+		width: 276px;
+
+		padding-top: 19px;
+		padding-bottom: 35px;
+
+		border: 2px solid #fff;
+	}
+
+	&__cell {
+
+		border: 2px solid #E5E5E5;
+
+		background-color: #fff;
+		
+		width: 276px;
+
+		padding: 25px 0 25px 25px;
+
+		position: relative;
+
+		&-description {
+			font-size: 14px;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			position: relative;
+			z-index: 0;
+		}
+	}
+
+	&__price-usd {
+		display: block;
+
+		margin-top: 15px;
+
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	&__hit-pos {
+		position: relative;
+	}
+
+
+	&__hit-wrapper {
+		position: absolute;
+		top: 0;
+		left: -2px;
+	}
+
+	&__hit-text {
+		position: absolute;
+		left: 14px;
+		top: 16px;
+
+		transform: rotate(-45deg);
+
+		font-weight: 300;
+	}
+
+	&__pink-filter {
+
+
+		& img {
+			position: absolute;
+			left: 230px;
+		}
+	}
+
+	&__smiles {
+
+		& img {
+			position: absolute;
+			left: 230px;
+		}
+	}
+
+	&__comments {
+
+		& img {
+			position: absolute;
+			left: 230px;
+		}
+	}
+
+	&__toggles {
+
+		margin: 0 auto;
+
+		padding-block-start: 45px;
+		padding-block-end: 50px;
+
+		width: 60px;
+
+		@media (min-width: $tablet-width) {
+			display: none;
+		}
+
+		@media (min-width: $desktop-width) {
+			display: none;
+		}
+	}
+}
