@@ -1,0 +1,115 @@
+.contacts {
+
+	&__subtitle-wrapper {
+		margin-top: 50px;
+		margin-bottom: 45px;
+	}
+
+	&__subtitle {
+
+		margin: 0;
+
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 120%;
+
+		text-align: center;
+	}
+
+	&__wrapper {
+		margin-top: 45px;
+
+		text-align: center;
+	}
+
+	&__phone {
+		margin-bottom: 31px;
+	}
+
+	&__email {
+		margin-bottom: 35px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 13px;
+
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&__link {
+		font-size: 24px;
+		font-weight: 300;
+		color: $contacts-text;
+
+		text-decoration: none;
+	}
+
+	&__adress-text {
+		
+			font-size: 24px;
+			font-weight: 300;
+			color: $contacts-text;
+	}
+
+	&__adress-wrapper {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__map-container {
+		margin: 0;
+		padding: 0;
+
+		position: relative;
+		z-index: 1;
+
+		//* === CONTACTS TRIANGLE ===
+		//*left
+		&::before {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 150px;
+
+			background: $basic-bg-white;
+
+			position: absolute;
+			top: -140px;
+			left: 49.8%;
+			transform: translateY(-100%);
+
+			transform: rotate(180deg) skewY(-190deg);
+		}
+
+		//*right
+		&::after {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 150px;
+
+			background: $basic-bg-white;
+			position: absolute;
+			top: -140px;
+			left: -50%;
+			transform: translateY(-100%);
+
+			transform: rotate(180deg) skewY(190deg);
+		}
+	}
+
+	&__map-wrapper {
+		margin-top: 41px;
+	}
+
+	&__map {
+		max-width: 100%;
+
+		height: 200px;
+
+		border: none;
+		
+	}
+}
